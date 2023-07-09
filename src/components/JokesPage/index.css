@@ -1,11 +1,11 @@
 .main-container {
   background-image: linear-gradient(to right, #599af0, #2671d4, #3a454d);
-  min-height: 120vh;
+  min-height: 150vh;
   width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 20%;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -13,7 +13,6 @@
   animation: bounce 5s linear infinite;
   font-size: 2em;
   color: green;
-  text-align: center;
 }
 
 @keyframes bounce {
@@ -24,33 +23,45 @@
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-20px);
+    transform: translateY(10px);
   }
   70% {
-    transform: translateY(-28px);
+    transform: translateY(-8px);
   }
   90% {
     transform: translateY(-10px);
   }
 }
 .list-of-containers {
-  min-height: 100pxs;
   list-style: none;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  width: 80%;
-  padding-left: 50px;
+  width: 90%;
+
   margin-top: -20px;
 }
 .popup-container {
+  margin-top: -40%;
+  align-self: center;
   background-image: linear-gradient(to right, #525451, #1a2729);
   min-height: 250px;
-  width: 650px;
-  margin-top: -480px;
+  width: 50%;
+  margin-left: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 30px 20px 20px 20px;
+}
+@media (max-width: 932px) {
+  .popup-container {
+    margin-top: -80%;
+    width: 60%;
+  }
+  .list-of-containers {
+    width: 100%;
+  }
 }
 .head {
   color: #ffffff;
@@ -108,4 +119,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 765px) {
+  .main-container {
+    min-height: 120vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .popup-container {
+    background-image: linear-gradient(to right, #525451, #1a2729);
+    min-height: 30%;
+    max-width: 660px;
+    min-width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px 20px 20px;
+    margin-right: 40px;
+  }
+  .list-of-containers {
+    width: 60%;
+  }
 }
